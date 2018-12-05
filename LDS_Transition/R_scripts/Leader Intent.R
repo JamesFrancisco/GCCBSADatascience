@@ -1,0 +1,5 @@
+xx<-barplot(table(test$Plan), col = c("grey", "orange", "darkblue", "red", "lawngreen"), ylim = c(0,700), ylab = "respondents", xlab = "leader Intent", main = "Leader Retention Plans" )
+legend("topright", lwd = 5, col = c("grey", "orange", "darkblue", "red", "lawngreen"), legend = c("0-No Response", "1-End Association", "2-No Decision", "3-Continue Short Term", "4-Continue Long Term"))
+yy <-as.data.frame(table(test$Plan))
+yy$Freq <- as.numeric(as.character(yy$Freq))
+text(x = xx, y = yy$Freq, label = yy$Freq, pos = 3, cex = 0.8, col = "red")
